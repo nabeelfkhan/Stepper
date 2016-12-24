@@ -30,7 +30,7 @@ def initializePins():
 	wiringpi.pinMode(CDRST,OUTPUT)
 	wiringpi.pinMode(CDDIR,OUTPUT)
 
-initializePins()
+#initializePins()
 
 #for time in range(0,4):
 #	for brightness in range(0,100): # Going from 0 to 100 will give us full off to full on
@@ -49,7 +49,7 @@ def requestInput():
 	pwmacount= int(raw_input("Enter number of pulses for Motor 1:\n"))
 	pwmbcount= int(raw_input("Enter number of pulses for Motor 2:\n"))
 
-requestInput()
+#requestInput()
 
 #Inputs for later
 MotorABDir = 1
@@ -58,22 +58,22 @@ MotorCDDir = 0
 def enableMotor1():
 	wiringpi.digitalWrite(ABRST,HIGH) #Enable motor 1
 
-enableMotor1()
+#enableMotor1()
 
 def enableMotor2():
 	wiringpi.digitalWrite(CDRST,HIGH) #Enable motor 2
 
-enableMotor2()
+#enableMotor2()
 
 def setMotor1Dir(MotorABDir):
 	wiringpi.digitalWrite(ABDIR,MotorABDir) #Set Dir to 0 for CW, 1 for CCW
 
-setMotor1Dir(MotorABDir)
+#setMotor1Dir(MotorABDir)
 
 def setMotor2Dir(MotorCDDir):
 	wiringpi.digitalWrite(CDDIR,MotorCDDir) 
 
-setMotor2Dir(MotorCDDir)
+#setMotor2Dir(MotorCDDir)
 
 
 def step(pwmacount,pwmbcount):
@@ -107,14 +107,14 @@ def step(pwmacount,pwmbcount):
 		
 			pwmbcount = pwmbcount - 1 
 
-step(pwmacount,pwmbcount)
+#step(pwmacount,pwmbcount)
 
 def disableMotor1():
 	wiringpi.digitalWrite(ABRST,LOW) #Disable motor 1
 
-disableMotor1()
+#disableMotor1()
 
 def disableMotor2():
 	wiringpi.digitalWrite(CDRST,LOW) #Disable motor 2
 
-disableMotor2()
+#disableMotor2()
