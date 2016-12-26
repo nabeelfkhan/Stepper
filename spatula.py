@@ -20,27 +20,21 @@ setMotor2Dir(0)
 
 
  
-enableMotor1()		#Motor 1 = spoon
-enableMotor2()		#Motor 2 = spatula
+enableMotor2()		#Motor 1 = spoon
+#enableMotor2()		#Motor 2 = spatula
 #wiringpi.delay(1000)	#Initial Delay
 					
 					#Spoon code
 for x in range(0, 5):					
-	setMotor1Dir(1) 	#set direction down --Utencil Up is CCW or 1. Down is 0 or CW
-	setMotor2Dir(1)
-	step(40,0)
-	wiringpi.delay(150)
-	step(0,90)
+	setMotor2Dir(1) 	#set direction down --Utencil Up is CCW or 1. Down is 0 or CW
+	step(0,80)
+	#disableMotor1()
 		#step spoon down to crack egg *** step(motor1,motor2)
-	wiringpi.delay(150)	#Delay
-	setMotor1Dir(0) 	#Set direction up
+	wiringpi.delay(200)	#Delay
 	setMotor2Dir(0) 	#Set direction up
 		#Delay
-	step(40,0)		#step spoon up slightly to reset position
+	step(0,80)		#step spoon up slightly to reset position
 	wiringpi.delay(150)
-	step(0,90)
-	wiringpi.delay(150)
-
 	#Set direction up	
 #	wiringpi.delay(1000)	#Delay
 #	setMotor2Dir(1) 	#Set direction up

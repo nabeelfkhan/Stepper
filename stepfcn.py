@@ -83,27 +83,27 @@ def step(pwmacount,pwmbcount):
 		if pwmacount > 0 and pwmbcount > 0:
 			wiringpi.digitalWrite(PWMA,HIGH)
 			wiringpi.digitalWrite(PWMB,HIGH)
-			wiringpi.delayMicroseconds(1000)
+			wiringpi.delayMicroseconds(750)
 			wiringpi.digitalWrite(PWMA,LOW)
 			wiringpi.digitalWrite(PWMB,LOW)
-			wiringpi.delayMicroseconds(1000)
+			wiringpi.delayMicroseconds(750)
 		
 			pwmacount = pwmacount -1
 			pwmbcount = pwmbcount -1
 
 		elif pwmacount > 0 and pwmbcount == 0:
 			wiringpi.digitalWrite(PWMA,HIGH)
-			wiringpi.delayMicroseconds(1000) #f = 900Hz (pulses per second). T = 1/f. Delay = T/2 = 555.56us> Modified based on scope
+			wiringpi.delayMicroseconds(750) #f = 900Hz (pulses per second). T = 1/f. Delay = T/2 = 555.56us> Modified based on scope
 			wiringpi.digitalWrite(PWMA,LOW)
-			wiringpi.delayMicroseconds(1000) #f = 900Hz (pulses per second). T = 1/f. Delay = T/2 = 555.56us> Modified based on scope
+			wiringpi.delayMicroseconds(500) #f = 900Hz (pulses per second). T = 1/f. Delay = T/2 = 555.56us> Modified based on scope
 		
 			pwmacount = pwmacount - 1
 	
 		elif pwmbcount > 0 and pwmacount == 0:
 			wiringpi.digitalWrite(PWMB,HIGH)
-			wiringpi.delayMicroseconds(1000) #f = 900Hz (pulses per second). T = 1/f. Delay = T/2 = 555.56us> Modified based on scope
+			wiringpi.delayMicroseconds(750) #f = 900Hz (pulses per second). T = 1/f. Delay = T/2 = 555.56us> Modified based on scope
 			wiringpi.digitalWrite(PWMB,LOW)
-			wiringpi.delayMicroseconds(1000)
+			wiringpi.delayMicroseconds(750)
 		
 			pwmbcount = pwmbcount - 1 
 
